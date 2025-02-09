@@ -17,7 +17,7 @@ Projekt wykorzystuje https://github.com/alan2207/bulletproof-react
 1. Sklonuj repozytorium:
 
 ```
-git clone https://github.com/twoje-repozytorium/samouk-project.git
+git clone https://github.com/dpraczuk/samouk-project-1
 ```
 
 2. Przejdź do katalogu projektu:
