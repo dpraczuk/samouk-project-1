@@ -1,41 +1,195 @@
+@use './variables';
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-Regular.woff2') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-Medium.woff2') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-SemiBold.woff2') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-Bold.woff2') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin dark-mode {
+  .dark & {
+    @content;
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: variables.$primary-text-light;
+  background-color: variables.$primary-background-light;
+  font-family: 'Geist', sans-serif;
 
   -webkit-font-smoothing: antialiased;
+
+  a,
+  input {
+    color: variables.$primary-text-light;
+  }
+
+  button {
+    background-color: variables.$primary-foreground-light;
+    color: #fff;
+  }
 }
 
-body {
+.dark {
+  color-scheme: dark;
+  color: variables.$primary-text-dark;
+  background-color: variables.$primary-background-dark;
+  border-color: variables.$secondary-text-dark;
+
+  a,
+  input {
+    color: variables.$primary-text-dark;
+    border-color: variables.$secondary-text-dark;
+  }
+
+  p {
+    color: variables.$secondary-text-dark;
+  }
+
+  button {
+    background-color: variables.$primary-foreground-dark;
+    color: #000;
+  }
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+.login {
   display: flex;
-  place-items: center;
+  min-height: 100svh;
+  width: 100%;
   justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  align-items: center;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin: 0 auto;
-}
+  &__register {
+    margin-top: 1rem;
+    font-size: variables.$font-xs;
+    font-weight: 500;
+    text-align: center;
 
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    a {
+      font-weight: 500;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: variables.$w-sm;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(85, 85, 85, 0.15);
+    border: 1px solid variables.$secondary-background-light;
+
+    @include dark-mode() {
+      border: 1px solid variables.$secondary-background-dark;
+    }
+
+    &__input-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      label {
+        font-size: variables.$font-m;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+        max-width: fit-content;
+      }
+
+      input {
+        background-color: transparent;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-size: variables.$font-m;
+        color: #333;
+        width: 100%;
+        border: 1px solid variables.$secondary-background-light;
+
+        @include dark-mode() {
+          border: 1px solid variables.$secondary-background-dark;
+        }
+
+        &:focus {
+          outline: 1px solid #585858;
+        }
+      }
+    }
+
+    &__forgot-password {
+      font-weight: 500;
+      max-width: 50%;
+      text-decoration: none;
+      font-size: variables.$font-m;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    h1 {
+      width: 100%;
+      font-size: variables.$font-xxl;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      width: 100%;
+      font-size: variables.$font-m;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      border-radius: 10px;
+      font-size: variables.$font-m;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+  }
 }

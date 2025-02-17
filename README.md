@@ -1,6 +1,10 @@
 # Samouk Project 1
 
-## Technologie
+## Overview
+
+This documentation provides an overview of the Exercise & Body Measurements Notes App, which I'm developing as part of my mentoring classes.
+
+## Technology
 
 - React
 - TypeScript
@@ -8,32 +12,43 @@
 - Sass
 - Tanstack Query
 
-## Struktura projektu
+## Project Structure
 
-Projekt wykorzystuje https://github.com/alan2207/bulletproof-react
+Project structure is based on https://github.com/alan2207/bulletproof-react
 
-## Jak uruchomić projekt
+## Prerequisites
 
-1. Sklonuj repozytorium:
+- Node.js (v.18.19.0 or later),
+- npm version (v. 10.9.0 or later)
+
+## Installation, setup & running the App
+
+1. Clone the repository:
 
 ```
 git clone https://github.com/dpraczuk/samouk-project-1
 ```
 
-2. Przejdź do katalogu projektu:
+2. Navigate to the project directory:
 
 ```bash
 cd samouk-project
 ```
 
-3. Zainstaluj zależności:
+3. Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-4. Uruchom aplikację:
+4. Run the application:
 
 ```bash
 pnpm run dev
 ```
+
+5. Open the application in your web browser:\*\* Navigate to `http://localhost:3000`.
+
+## Styles
+
+In this project, I'm using the SASS preprocessor with custom designs.
