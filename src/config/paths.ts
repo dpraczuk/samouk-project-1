@@ -1,38 +1,12 @@
 export const paths = {
-  home: {
-    path: '/',
-    getHref: () => '/',
-  },
-
+  home: '/',
   auth: {
-    register: {
-      path: '/auth/register',
-      getHref: (redirectTo?: string | null | undefined) =>
-        `/auth/register${
-          redirectTo ? `?redirectTo=${encodeURIComponent(redirectTo)}` : ''
-        }`,
-    },
-    login: {
-      path: '/auth/login',
-      getHref: (redirectTo?: string | null | undefined) =>
-        `/auth/login${
-          redirectTo ? `?redirectTo=${encodeURIComponent(redirectTo)}` : ''
-        }`,
-    },
+    login: '/auth/login',
+    register: '/auth/register',
   },
-
   app: {
-    root: {
-      path: '/app',
-      getHref: () => '/app',
-    },
-    dashboard: {
-      path: '',
-      getHref: () => '/app',
-    },
-    profile: {
-      path: 'profile',
-      getHref: () => '/app/profile',
-    },
+    root: '/app',
+    dashboard: '/app',
+    profile: '/app/profile',
   },
 } as const;

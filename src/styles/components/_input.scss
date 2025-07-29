@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as *;
+
+input {
+  background-color: transparent;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  border-radius: 0.3125rem;
+  font-size: variables.$font-m;
+  width: 100%;
+  border: 1px solid variables.$secondary-background-light;
+
+  @include dark-mode() {
+    border: 1px solid variables.$secondary-background-dark;
+
+    &:focus {
+      outline: 1px solid variables.$outline-dark;
+    }
+  }
+
+  &:focus {
+    outline: 1px solid variables.$outline-light;
+  }
+}
