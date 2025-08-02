@@ -19,7 +19,7 @@
 
   button {
     background-color: variables.$primary-foreground-light;
-    color: variables.$primary-text-light;
+    color: variables.$transparent-text-light;
   }
 }
 
@@ -41,6 +41,6 @@
 
   button {
     background-color: variables.$primary-foreground-dark;
-    color: variables.$primary-text-dark;
+    color: variables.$transparent-text-dark;
   }
 }
