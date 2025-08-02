@@ -9,7 +9,7 @@ export const LoginForm = () => {
         Enter your email below to login to your account
       </p>
       <form className="login-form__form">
-        <div className="login-form__input-wrapper">
+        <div className="input-wrapper">
           <Label className="login-form__label">Email</Label>
           <input
             className="login-form__input"
@@ -17,7 +17,7 @@ export const LoginForm = () => {
             placeholder="Email"
           />
         </div>
-        <div className="login-form__input-wrapper">
+        <div className="input-wrapper">
           <Label className="login-form__label">Password</Label>
           <Link
             className="login-form__forgot-password"
