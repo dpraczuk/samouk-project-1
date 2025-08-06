@@ -1,0 +1,85 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as *;
+
+.login-form {
+  &__title {
+    width: 100%;
+    font-size: variables.$font-xxl;
+    margin-bottom: variables.$space-sm;
+  }
+
+  &__description {
+    width: 100%;
+    font-size: variables.$font-m;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: variables.$w-sm;
+    padding: variables.$space-xl;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 8px rgba(85, 85, 85, 0.15);
+    border: 1px solid variables.$secondary-background-light;
+
+    @include dark-mode() {
+      border: 1px solid variables.$secondary-background-dark;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: variables.$space-xl;
+    }
+  }
+
+  &__label {
+    font-size: variables.$font-m;
+    margin-bottom: variables.$space-xs;
+    font-weight: variables.$font-weight-medium;
+    max-width: fit-content;
+  }
+
+  &__forgot-password {
+    font-weight: variables.$font-weight-medium;
+    max-width: 50%;
+    text-decoration: none;
+    font-size: variables.$font-m;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__submit {
+    margin-top: variables.$space-lg;
+    padding: variables.$space-md;
+    border-radius: 0.625rem;
+    font-size: variables.$font-m;
+    font-weight: variables.$font-weight-semi-bold;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__register {
+    margin-top: variables.$space-lg;
+    font-size: variables.$font-xs;
+    font-weight: variables.$font-weight-medium;
+    text-align: center;
+
+    a {
+      font-weight: variables.$font-weight-medium;
+    }
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}

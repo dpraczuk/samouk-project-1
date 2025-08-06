@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as variables;
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-Regular.woff2') format('woff');
+  font-weight: variables.$font-weight-normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-Medium.woff2') format('woff');
+  font-weight: variables.$font-weight-medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-SemiBold.woff2') format('woff');
+  font-weight: variables.$font-weight-semi-bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/Geist/Geist-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Geist/Geist-Bold.woff2') format('woff');
+  font-weight: variables.$font-weight-bold;
+  font-style: normal;
+}

@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as variables;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: variables.$font-weight-normal;
+
+  color-scheme: light dark;
+  color: variables.$primary-text-light;
+  background-color: variables.$primary-background-light;
+  font-family: 'Geist', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+
+  a,
+  input {
+    color: variables.$primary-text-light;
+  }
+
+  button {
+    background-color: variables.$primary-foreground-light;
+    color: variables.$transparent-text-light;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+  color: variables.$primary-text-dark;
+  background-color: variables.$primary-background-dark;
+  border-color: variables.$secondary-text-dark;
+
+  a,
+  input {
+    color: variables.$primary-text-dark;
+    border-color: variables.$secondary-text-dark;
+  }
+
+  p {
+    color: variables.$secondary-text-dark;
+  }
+
+  button {
+    background-color: variables.$primary-foreground-dark;
+    color: variables.$transparent-text-dark;
+  }
+}
